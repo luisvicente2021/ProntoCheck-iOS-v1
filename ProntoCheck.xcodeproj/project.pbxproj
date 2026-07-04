@@ -26,6 +26,7 @@
 		B11DBB6F2FF9C4A20052CDBD /* AccessPointRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB6E2FF9C49F0052CDBD /* AccessPointRepository.swift */; };
 		B11DBB712FF9C4B40052CDBD /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB702FF9C4B20052CDBD /* AuthRepository.swift */; };
 		B11DBB732FF9C4CD0052CDBD /* AttendanceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB722FF9C4CB0052CDBD /* AttendanceRepository.swift */; };
+		B11DBB762FF9CCDE0052CDBD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB752FF9CCDE0052CDBD /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		B11DBB6E2FF9C49F0052CDBD /* AccessPointRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessPointRepository.swift; sourceTree = "<group>"; };
 		B11DBB702FF9C4B20052CDBD /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		B11DBB722FF9C4CB0052CDBD /* AttendanceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceRepository.swift; sourceTree = "<group>"; };
+		B11DBB752FF9CCDE0052CDBD /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		B11DBB442FF9BDC10052CDBD /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B11DBB742FF9CCD70052CDBD /* Location */,
 				B11DBB432FF9BDC10052CDBD /* Network */,
 			);
 			path = Core;
@@ -250,6 +253,14 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		B11DBB742FF9CCD70052CDBD /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				B11DBB752FF9CCDE0052CDBD /* LocationManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -328,6 +339,7 @@
 				B11DBB4C2FF9BE370052CDBD /* NetworkService.swift in Sources */,
 				B11DBB5F2FF9C2930052CDBD /* CreateEmployeeRequest.swift in Sources */,
 				B11DBB652FF9C2D10052CDBD /* AccessPoint.swift in Sources */,
+				B11DBB762FF9CCDE0052CDBD /* LocationManager.swift in Sources */,
 				845C89F32FF96B4400D5BD5B /* ContentView.swift in Sources */,
 				B11DBB502FF9BFFF0052CDBD /* NetworkServiceProtocol.swift in Sources */,
 				B11DBB4E2FF9BE7D0052CDBD /* NetworkError.swift in Sources */,
