@@ -27,6 +27,15 @@
 		B11DBB712FF9C4B40052CDBD /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB702FF9C4B20052CDBD /* AuthRepository.swift */; };
 		B11DBB732FF9C4CD0052CDBD /* AttendanceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB722FF9C4CB0052CDBD /* AttendanceRepository.swift */; };
 		B11DBB762FF9CCDE0052CDBD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB752FF9CCDE0052CDBD /* LocationManager.swift */; };
+		B11DBB7A2FF9CFDA0052CDBD /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB792FF9CFDA0052CDBD /* AuthResponse.swift */; };
+		B11DBB7C2FF9D0480052CDBD /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB7B2FF9D0480052CDBD /* AuthUser.swift */; };
+		B1D71B9D2FFAB8F700249594 /* AdminLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71B9C2FFAB8F700249594 /* AdminLoginView.swift */; };
+		B1D71B9F2FFABFD600249594 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71B9E2FFABFD000249594 /* AuthViewModel.swift */; };
+		B1D71BA12FFAC5C900249594 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA02FFAC5C900249594 /* AppConfiguration.swift */; };
+		B1D71BA32FFAC5EC00249594 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA22FFAC5EC00249594 /* AppContainer.swift */; };
+		B1D71BA52FFAC63100249594 /* AuthRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA42FFAC63100249594 /* AuthRepositoryProtocol.swift */; };
+		B1D71BA72FFAC85400249594 /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA62FFAC85400249594 /* AuthEndpoint.swift */; };
+		B1D71BAA2FFACED300249594 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA92FFACED300249594 /* SessionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +61,15 @@
 		B11DBB702FF9C4B20052CDBD /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		B11DBB722FF9C4CB0052CDBD /* AttendanceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceRepository.swift; sourceTree = "<group>"; };
 		B11DBB752FF9CCDE0052CDBD /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B11DBB792FF9CFDA0052CDBD /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		B11DBB7B2FF9D0480052CDBD /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
+		B1D71B9C2FFAB8F700249594 /* AdminLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginView.swift; sourceTree = "<group>"; };
+		B1D71B9E2FFABFD000249594 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		B1D71BA02FFAC5C900249594 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		B1D71BA22FFAC5EC00249594 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		B1D71BA42FFAC63100249594 /* AuthRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryProtocol.swift; sourceTree = "<group>"; };
+		B1D71BA62FFAC85400249594 /* AuthEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
+		B1D71BA92FFACED300249594 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +103,8 @@
 		845C89EF2FF96B4400D5BD5B /* ProntoCheck */ = {
 			isa = PBXGroup;
 			children = (
+				B1D71BA22FFAC5EC00249594 /* AppContainer.swift */,
+				B1D71BA02FFAC5C900249594 /* AppConfiguration.swift */,
 				B11DBB512FF9C1740052CDBD /* Features */,
 				B11DBB442FF9BDC10052CDBD /* Core */,
 				845C89F02FF96B4400D5BD5B /* ProntoCheckApp.swift */,
@@ -118,6 +138,7 @@
 		B11DBB442FF9BDC10052CDBD /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B1D71BA82FFACEC800249594 /* Session */,
 				B11DBB742FF9CCD70052CDBD /* Location */,
 				B11DBB432FF9BDC10052CDBD /* Network */,
 			);
@@ -207,6 +228,10 @@
 		B11DBB5C2FF9C2470052CDBD /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				B1D71BA62FFAC85400249594 /* AuthEndpoint.swift */,
+				B1D71B9B2FFAB85800249594 /* Services */,
+				B1D71B9A2FFAB83B00249594 /* Views */,
+				B1D71B992FFAB82800249594 /* ViewModels */,
 				B11DBB682FF9C4410052CDBD /* Repository */,
 				B11DBB5D2FF9C24D0052CDBD /* DTOs */,
 			);
@@ -216,6 +241,8 @@
 		B11DBB5D2FF9C24D0052CDBD /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
+				B11DBB7B2FF9D0480052CDBD /* AuthUser.swift */,
+				B11DBB792FF9CFDA0052CDBD /* AuthResponse.swift */,
 				B11DBB662FF9C2E20052CDBD /* LoginRequest.swift */,
 			);
 			path = DTOs;
@@ -224,6 +251,7 @@
 		B11DBB682FF9C4410052CDBD /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				B1D71BA42FFAC63100249594 /* AuthRepositoryProtocol.swift */,
 				B11DBB702FF9C4B20052CDBD /* AuthRepository.swift */,
 			);
 			path = Repository;
@@ -259,6 +287,37 @@
 				B11DBB752FF9CCDE0052CDBD /* LocationManager.swift */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		B1D71B992FFAB82800249594 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B1D71B9E2FFABFD000249594 /* AuthViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B1D71B9A2FFAB83B00249594 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1D71B9C2FFAB8F700249594 /* AdminLoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B1D71B9B2FFAB85800249594 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B1D71BA82FFACEC800249594 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				B1D71BA92FFACED300249594 /* SessionManager.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,21 +392,30 @@
 			files = (
 				B11DBB6F2FF9C4A20052CDBD /* AccessPointRepository.swift in Sources */,
 				B11DBB712FF9C4B40052CDBD /* AuthRepository.swift in Sources */,
+				B1D71BA52FFAC63100249594 /* AuthRepositoryProtocol.swift in Sources */,
 				B11DBB632FF9C2BF0052CDBD /* Attendance.swift in Sources */,
+				B1D71BA72FFAC85400249594 /* AuthEndpoint.swift in Sources */,
 				B11DBB672FF9C2E50052CDBD /* LoginRequest.swift in Sources */,
 				B11DBB4F2FF9BFED0052CDBD /* Endpoint.swift in Sources */,
 				B11DBB4C2FF9BE370052CDBD /* NetworkService.swift in Sources */,
 				B11DBB5F2FF9C2930052CDBD /* CreateEmployeeRequest.swift in Sources */,
 				B11DBB652FF9C2D10052CDBD /* AccessPoint.swift in Sources */,
 				B11DBB762FF9CCDE0052CDBD /* LocationManager.swift in Sources */,
+				B1D71BAA2FFACED300249594 /* SessionManager.swift in Sources */,
 				845C89F32FF96B4400D5BD5B /* ContentView.swift in Sources */,
+				B11DBB7A2FF9CFDA0052CDBD /* AuthResponse.swift in Sources */,
 				B11DBB502FF9BFFF0052CDBD /* NetworkServiceProtocol.swift in Sources */,
+				B1D71B9D2FFAB8F700249594 /* AdminLoginView.swift in Sources */,
 				B11DBB4E2FF9BE7D0052CDBD /* NetworkError.swift in Sources */,
 				B11DBB6D2FF9C4790052CDBD /* EmployeeRepository.swift in Sources */,
+				B1D71BA12FFAC5C900249594 /* AppConfiguration.swift in Sources */,
 				B11DBB542FF9C1A10052CDBD /* Employees.swift in Sources */,
+				B1D71BA32FFAC5EC00249594 /* AppContainer.swift in Sources */,
 				B11DBB612FF9C2AB0052CDBD /* RegisterAttendanceRequest.swift in Sources */,
 				845C89F12FF96B4400D5BD5B /* ProntoCheckApp.swift in Sources */,
+				B1D71B9F2FFABFD600249594 /* AuthViewModel.swift in Sources */,
 				B11DBB732FF9C4CD0052CDBD /* AttendanceRepository.swift in Sources */,
+				B11DBB7C2FF9D0480052CDBD /* AuthUser.swift in Sources */,
 				B11DBB462FF9BDE20052CDBD /* HTTPMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
