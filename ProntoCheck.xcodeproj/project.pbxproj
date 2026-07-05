@@ -36,6 +36,7 @@
 		B1D71BA52FFAC63100249594 /* AuthRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA42FFAC63100249594 /* AuthRepositoryProtocol.swift */; };
 		B1D71BA72FFAC85400249594 /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA62FFAC85400249594 /* AuthEndpoint.swift */; };
 		B1D71BAA2FFACED300249594 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA92FFACED300249594 /* SessionManager.swift */; };
+		B1D71BAC2FFAD25A00249594 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BAB2FFAD25A00249594 /* RootView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		B1D71BA42FFAC63100249594 /* AuthRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryProtocol.swift; sourceTree = "<group>"; };
 		B1D71BA62FFAC85400249594 /* AuthEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
 		B1D71BA92FFACED300249594 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		B1D71BAB2FFAD25A00249594 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		845C89EF2FF96B4400D5BD5B /* ProntoCheck */ = {
 			isa = PBXGroup;
 			children = (
+				B1D71BAB2FFAD25A00249594 /* RootView.swift */,
 				B1D71BA22FFAC5EC00249594 /* AppContainer.swift */,
 				B1D71BA02FFAC5C900249594 /* AppConfiguration.swift */,
 				B11DBB512FF9C1740052CDBD /* Features */,
@@ -394,6 +397,7 @@
 				B11DBB712FF9C4B40052CDBD /* AuthRepository.swift in Sources */,
 				B1D71BA52FFAC63100249594 /* AuthRepositoryProtocol.swift in Sources */,
 				B11DBB632FF9C2BF0052CDBD /* Attendance.swift in Sources */,
+				B1D71BAC2FFAD25A00249594 /* RootView.swift in Sources */,
 				B1D71BA72FFAC85400249594 /* AuthEndpoint.swift in Sources */,
 				B11DBB672FF9C2E50052CDBD /* LoginRequest.swift in Sources */,
 				B11DBB4F2FF9BFED0052CDBD /* Endpoint.swift in Sources */,
