@@ -24,7 +24,13 @@ final class NetworkService: NetworkServiceProtocol {
     }
 
     func request<T: Decodable>(endpoint: Endpoint) async throws -> T {
-        guard let url = URL(string: baseURL + endpoint.basePath + endpoint.path) else {
+        guard var components = URLComponents(string: baseURL + endpoint.basePath + endpoint.path) else {
+            throw NetworkError.invalidURL
+        }
+
+        components.queryItems = endpoint.queryItems
+
+        guard let url = components.url else {
             throw NetworkError.invalidURL
         }
 
