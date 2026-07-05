@@ -7,6 +7,9 @@
 
 
 final class AppContainer {
+    
+    @MainActor
+       lazy var sessionManager = SessionManager()
 
     lazy var networkService: NetworkServiceProtocol = {
         NetworkService(
@@ -24,7 +27,7 @@ final class AppContainer {
     @MainActor
     lazy var authViewModel: AuthViewModel = {
         AuthViewModel(
-            repository: authRepository
+            repository: authRepository, sessionManager: sessionManager
         )
     }()
 }

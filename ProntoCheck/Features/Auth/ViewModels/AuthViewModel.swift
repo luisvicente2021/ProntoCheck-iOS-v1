@@ -19,9 +19,12 @@ import UIKit
         @Published var isAuthenticated = false
 
         private let repository: AuthRepositoryProtocol
+        private let sessionManager: SessionManager
 
-        init(repository: AuthRepositoryProtocol) {
+
+        init(repository: AuthRepositoryProtocol, sessionManager: SessionManager) {
             self.repository = repository
+            self.sessionManager = sessionManager
         }
 
         func login() async {
@@ -36,6 +39,11 @@ import UIKit
 
                 isAuthenticated = true
                 print("Token:", response.accessToken)
+                sessionManager.saveSession(response)
+                
+                print(sessionManager.isAuthenticated)
+                print(sessionManager.currentUser?.email ?? "")
+                print(sessionManager.accessToken ?? "")
 
             } catch {
                 errorMessage = "No se pudo iniciar sesión"

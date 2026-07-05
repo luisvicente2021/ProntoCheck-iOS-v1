@@ -35,6 +35,7 @@
 		B1D71BA32FFAC5EC00249594 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA22FFAC5EC00249594 /* AppContainer.swift */; };
 		B1D71BA52FFAC63100249594 /* AuthRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA42FFAC63100249594 /* AuthRepositoryProtocol.swift */; };
 		B1D71BA72FFAC85400249594 /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA62FFAC85400249594 /* AuthEndpoint.swift */; };
+		B1D71BAA2FFACED300249594 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA92FFACED300249594 /* SessionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		B1D71BA22FFAC5EC00249594 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		B1D71BA42FFAC63100249594 /* AuthRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryProtocol.swift; sourceTree = "<group>"; };
 		B1D71BA62FFAC85400249594 /* AuthEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
+		B1D71BA92FFACED300249594 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		B11DBB442FF9BDC10052CDBD /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B1D71BA82FFACEC800249594 /* Session */,
 				B11DBB742FF9CCD70052CDBD /* Location */,
 				B11DBB432FF9BDC10052CDBD /* Network */,
 			);
@@ -309,6 +312,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		B1D71BA82FFACEC800249594 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				B1D71BA92FFACED300249594 /* SessionManager.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -390,6 +401,7 @@
 				B11DBB5F2FF9C2930052CDBD /* CreateEmployeeRequest.swift in Sources */,
 				B11DBB652FF9C2D10052CDBD /* AccessPoint.swift in Sources */,
 				B11DBB762FF9CCDE0052CDBD /* LocationManager.swift in Sources */,
+				B1D71BAA2FFACED300249594 /* SessionManager.swift in Sources */,
 				845C89F32FF96B4400D5BD5B /* ContentView.swift in Sources */,
 				B11DBB7A2FF9CFDA0052CDBD /* AuthResponse.swift in Sources */,
 				B11DBB502FF9BFFF0052CDBD /* NetworkServiceProtocol.swift in Sources */,
