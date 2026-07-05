@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct ProntoCheckApp: App {
+
+    private let container = AppContainer()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView(
+                viewModel: container.authViewModel
+            )
         }
     }
 }
