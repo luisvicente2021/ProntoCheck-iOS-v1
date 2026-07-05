@@ -37,6 +37,9 @@
 		B1D71BA72FFAC85400249594 /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA62FFAC85400249594 /* AuthEndpoint.swift */; };
 		B1D71BAA2FFACED300249594 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA92FFACED300249594 /* SessionManager.swift */; };
 		B1D71BAC2FFAD25A00249594 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BAB2FFAD25A00249594 /* RootView.swift */; };
+		B1DB781A2FFAEEB500DD93BA /* AttendanceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB78192FFAEEB500DD93BA /* AttendanceEndpoint.swift */; };
+		B1DB781C2FFAEF5900DD93BA /* AttendanceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB781B2FFAEF5900DD93BA /* AttendanceType.swift */; };
+		B1DB781F2FFAEFD900DD93BA /* RegisterAttendanceRequest+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB781E2FFAEFD400DD93BA /* RegisterAttendanceRequest+Mapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +75,9 @@
 		B1D71BA62FFAC85400249594 /* AuthEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
 		B1D71BA92FFACED300249594 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		B1D71BAB2FFAD25A00249594 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B1DB78192FFAEEB500DD93BA /* AttendanceEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceEndpoint.swift; sourceTree = "<group>"; };
+		B1DB781B2FFAEF5900DD93BA /* AttendanceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceType.swift; sourceTree = "<group>"; };
+		B1DB781E2FFAEFD400DD93BA /* RegisterAttendanceRequest+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterAttendanceRequest+Mapper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +194,9 @@
 		B11DBB572FF9C1F70052CDBD /* Attendance */ = {
 			isa = PBXGroup;
 			children = (
+				B1DB781D2FFAEFCA00DD93BA /* Mappers */,
+				B1DB781B2FFAEF5900DD93BA /* AttendanceType.swift */,
+				B1DB78192FFAEEB500DD93BA /* AttendanceEndpoint.swift */,
 				B11DBB6A2FF9C4590052CDBD /* Repository */,
 				B11DBB592FF9C20D0052CDBD /* DTOs */,
 				B11DBB582FF9C2050052CDBD /* Models */,
@@ -323,6 +332,14 @@
 			path = Session;
 			sourceTree = "<group>";
 		};
+		B1DB781D2FFAEFCA00DD93BA /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				B1DB781E2FFAEFD400DD93BA /* RegisterAttendanceRequest+Mapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -398,6 +415,7 @@
 				B1D71BA52FFAC63100249594 /* AuthRepositoryProtocol.swift in Sources */,
 				B11DBB632FF9C2BF0052CDBD /* Attendance.swift in Sources */,
 				B1D71BAC2FFAD25A00249594 /* RootView.swift in Sources */,
+				B1DB781F2FFAEFD900DD93BA /* RegisterAttendanceRequest+Mapper.swift in Sources */,
 				B1D71BA72FFAC85400249594 /* AuthEndpoint.swift in Sources */,
 				B11DBB672FF9C2E50052CDBD /* LoginRequest.swift in Sources */,
 				B11DBB4F2FF9BFED0052CDBD /* Endpoint.swift in Sources */,
@@ -411,6 +429,8 @@
 				B11DBB502FF9BFFF0052CDBD /* NetworkServiceProtocol.swift in Sources */,
 				B1D71B9D2FFAB8F700249594 /* AdminLoginView.swift in Sources */,
 				B11DBB4E2FF9BE7D0052CDBD /* NetworkError.swift in Sources */,
+				B1DB781C2FFAEF5900DD93BA /* AttendanceType.swift in Sources */,
+				B1DB781A2FFAEEB500DD93BA /* AttendanceEndpoint.swift in Sources */,
 				B11DBB6D2FF9C4790052CDBD /* EmployeeRepository.swift in Sources */,
 				B1D71BA12FFAC5C900249594 /* AppConfiguration.swift in Sources */,
 				B11DBB542FF9C1A10052CDBD /* Employees.swift in Sources */,
