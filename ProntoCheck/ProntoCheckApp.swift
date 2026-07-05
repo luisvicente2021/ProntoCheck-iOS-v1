@@ -14,9 +14,10 @@ struct ProntoCheckApp: App {
 
     var body: some Scene {
         WindowGroup {
-            LoginView(
-                viewModel: container.authViewModel
-            )
+            RootView(
+                        sessionManager: container.sessionManager,
+                        authViewModel: container.authViewModel
+                    )
         }
     }
 }
