@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		844C19BD2FFD5EED001EEA1A /* AttendanceRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C19BC2FFD5EED001EEA1A /* AttendanceRepositoryProtocol.swift */; };
 		844C19BF2FFD6F56001EEA1A /* RegisterAttendanceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C19BE2FFD6F56001EEA1A /* RegisterAttendanceRequest.swift */; };
+		844C19C22FFD8172001EEA1A /* AttendanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C19C12FFD8172001EEA1A /* AttendanceViewModel.swift */; };
 		845C89F12FF96B4400D5BD5B /* ProntoCheckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C89F02FF96B4400D5BD5B /* ProntoCheckApp.swift */; };
 		845C89F32FF96B4400D5BD5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C89F22FF96B4400D5BD5B /* ContentView.swift */; };
 		845C89F52FF96B4A00D5BD5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845C89F42FF96B4A00D5BD5B /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		844C19BC2FFD5EED001EEA1A /* AttendanceRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceRepositoryProtocol.swift; sourceTree = "<group>"; };
 		844C19BE2FFD6F56001EEA1A /* RegisterAttendanceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAttendanceRequest.swift; sourceTree = "<group>"; };
+		844C19C12FFD8172001EEA1A /* AttendanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewModel.swift; sourceTree = "<group>"; };
 		845C89ED2FF96B4400D5BD5B /* ProntoCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProntoCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845C89F02FF96B4400D5BD5B /* ProntoCheckApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProntoCheckApp.swift; sourceTree = "<group>"; };
 		845C89F22FF96B4400D5BD5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		844C19C02FFD8151001EEA1A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				844C19C12FFD8172001EEA1A /* AttendanceViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		845C89E42FF96B4400D5BD5B = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +205,7 @@
 		B11DBB572FF9C1F70052CDBD /* Attendance */ = {
 			isa = PBXGroup;
 			children = (
+				844C19C02FFD8151001EEA1A /* ViewModels */,
 				B1DB781D2FFAEFCA00DD93BA /* Mappers */,
 				B1DB781B2FFAEF5900DD93BA /* AttendanceType.swift */,
 				B1DB78192FFAEEB500DD93BA /* AttendanceEndpoint.swift */,
@@ -435,6 +446,7 @@
 				B11DBB6D2FF9C4790052CDBD /* EmployeeRepository.swift in Sources */,
 				B1D71BA12FFAC5C900249594 /* AppConfiguration.swift in Sources */,
 				B11DBB542FF9C1A10052CDBD /* Employees.swift in Sources */,
+				844C19C22FFD8172001EEA1A /* AttendanceViewModel.swift in Sources */,
 				B1D71BA32FFAC5EC00249594 /* AppContainer.swift in Sources */,
 				845C89F12FF96B4400D5BD5B /* ProntoCheckApp.swift in Sources */,
 				B1D71B9F2FFABFD600249594 /* AuthViewModel.swift in Sources */,
