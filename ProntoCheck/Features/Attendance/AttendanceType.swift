@@ -7,6 +7,6 @@
 import Foundation
 
 enum AttendanceType: String, Codable {
-    case checkIn = "entrada"
-    case checkOut = "salida"
+    case entrada
+    case salida
 }
