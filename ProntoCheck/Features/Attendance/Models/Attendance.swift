@@ -8,22 +8,22 @@ import Foundation
 
 struct Attendance: Identifiable, Codable {
     let id: UUID
-    let empleadoId: UUID
-    let tipo: AttendanceType
-    let fecha: String?
-    let hora: String?
+    let employeeId: UUID
+    let type: AttendanceType
+    let date: String?
+    let time: String?
     let createdAt: String?
-    let idPuntoAcceso: UUID
-    let fechaHora: String?
+    let accessPointId: UUID
+    let dateTime: String?
 
     enum CodingKeys: String, CodingKey {
         case id
-        case empleadoId = "empleado_id"
-        case tipo
-        case fecha
-        case hora
+        case employeeId = "empleado_id"
+        case type = "tipo"
+        case date = "fecha"
+        case time = "hora"
         case createdAt = "created_at"
-        case idPuntoAcceso = "id_punto_acceso"
-        case fechaHora = "fecha_hora"
+        case accessPointId = "id_punto_acceso"
+        case dateTime = "fecha_hora"
     }
 }

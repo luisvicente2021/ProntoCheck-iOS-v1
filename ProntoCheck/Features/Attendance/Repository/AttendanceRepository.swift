@@ -8,6 +8,7 @@
 import Foundation
 
 final class AttendanceRepository: AttendanceRepositoryProtocol {
+    
     private let networkService: NetworkServiceProtocol
 
     init(networkService: NetworkServiceProtocol) {
@@ -15,24 +16,19 @@ final class AttendanceRepository: AttendanceRepositoryProtocol {
     }
 
     func registerAttendance(
-        empleadoId: UUID,
-        tipo: AttendanceType,
-        idPuntoAcceso: UUID
+        employeeId empleadoId: UUID,
+        type tipo: AttendanceType,
+        accessPointId idPuntoAcceso: UUID,
+        dateTime datetime: String
     ) async throws -> Attendance {
         
         let request = RegisterAttendanceRequest(
             employeeId: empleadoId,
+            type: tipo,
             accessPointId: idPuntoAcceso,
-            type: tipo
+            dateTime: datetime
         )
         
-      /*  let request = RegisterAttendanceRequest(
-            empleadoId: empleadoId,
-            tipo: tipo,
-            idPuntoAcceso: idPuntoAcceso,
-            fechaHora: ISO8601DateFormatter().string(from: Date())
-        )*/
-
         let response: [Attendance] = try await networkService.request(
             endpoint: AttendanceEndpoint.register(request)
         )

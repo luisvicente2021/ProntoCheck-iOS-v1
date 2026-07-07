@@ -6,15 +6,16 @@
 //
 import Foundation
 
-struct RegisterAttendanceRequest: Encodable {
-
+struct RegisterAttendanceRequest: Codable {
     let employeeId: UUID
-    let accessPointId: UUID
     let type: AttendanceType
+    let accessPointId: UUID
+    let dateTime: String
 
     enum CodingKeys: String, CodingKey {
         case employeeId = "empleado_id"
-        case accessPointId = "id_punto_acceso"
         case type = "tipo"
+        case accessPointId = "id_punto_acceso"
+        case dateTime = "fecha_hora"
     }
 }

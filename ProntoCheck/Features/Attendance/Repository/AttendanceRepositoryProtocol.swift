@@ -9,8 +9,9 @@ import Foundation
 
 protocol AttendanceRepositoryProtocol {
     func registerAttendance(
-        empleadoId: UUID,
-        tipo: AttendanceType,
-        idPuntoAcceso: UUID
+        employeeId: UUID,
+        type: AttendanceType,
+        accessPointId: UUID,
+        dateTime: String
     ) async throws -> Attendance
 }
