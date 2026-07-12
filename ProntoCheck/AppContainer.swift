@@ -34,4 +34,11 @@ final class AppContainer {
             repository: authRepository, sessionManager: sessionManager
         )
     }()
+    
+    @MainActor
+    lazy var attendanceViewModel: AttendanceViewModel = {
+        AttendanceViewModel(
+            repository: attendanceRepository
+        )
+    }()
 }
