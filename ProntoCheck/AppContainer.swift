@@ -23,6 +23,10 @@ final class AppContainer {
             networkService: networkService
         )
     }()
+    
+    lazy var attendanceRepository: AttendanceRepositoryProtocol = {
+           AttendanceRepository(networkService: networkService)
+       }()
 
     @MainActor
     lazy var authViewModel: AuthViewModel = {
