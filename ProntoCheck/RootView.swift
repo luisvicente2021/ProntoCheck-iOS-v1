@@ -7,15 +7,15 @@
 import SwiftUI
 
 struct RootView: View {
-
+    
     @ObservedObject var sessionManager: SessionManager
     let authViewModel: AuthViewModel
-
+    let timeClockViewModel: TimeClockViewModel
+    
     var body: some View {
         if sessionManager.isAuthenticated {
-            VStack {
-                Text("✅ Login exitoso")
-                Text(sessionManager.currentUser?.email ?? "")
+            NavigationStack {
+                TimeClockView(viewModel: timeClockViewModel)
             }
         } else {
             LoginView(viewModel: authViewModel)

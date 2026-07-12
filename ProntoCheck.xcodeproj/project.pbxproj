@@ -31,7 +31,6 @@
 		B11DBB762FF9CCDE0052CDBD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB752FF9CCDE0052CDBD /* LocationManager.swift */; };
 		B11DBB7A2FF9CFDA0052CDBD /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB792FF9CFDA0052CDBD /* AuthResponse.swift */; };
 		B11DBB7C2FF9D0480052CDBD /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB7B2FF9D0480052CDBD /* AuthUser.swift */; };
-		B1D71B9D2FFAB8F700249594 /* AdminLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71B9C2FFAB8F700249594 /* AdminLoginView.swift */; };
 		B1D71B9F2FFABFD600249594 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71B9E2FFABFD000249594 /* AuthViewModel.swift */; };
 		B1D71BA12FFAC5C900249594 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA02FFAC5C900249594 /* AppConfiguration.swift */; };
 		B1D71BA32FFAC5EC00249594 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA22FFAC5EC00249594 /* AppContainer.swift */; };
@@ -41,6 +40,10 @@
 		B1D71BAC2FFAD25A00249594 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BAB2FFAD25A00249594 /* RootView.swift */; };
 		B1DB781A2FFAEEB500DD93BA /* AttendanceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB78192FFAEEB500DD93BA /* AttendanceEndpoint.swift */; };
 		B1DB781C2FFAEF5900DD93BA /* AttendanceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DB781B2FFAEF5900DD93BA /* AttendanceType.swift */; };
+		B1EA41333004011F00030DD5 /* TimeClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA41323004011F00030DD5 /* TimeClockViewModel.swift */; };
+		B1EA413430040C3600030DD5 /* TimeClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA41303004003D00030DD5 /* TimeClockView.swift */; };
+		B1EA413530040C4D00030DD5 /* AdminLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71B9C2FFAB8F700249594 /* AdminLoginView.swift */; };
+		B1EA413830040DD300030DD5 /* StatusCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA413730040DD300030DD5 /* StatusCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +84,9 @@
 		B1DB78192FFAEEB500DD93BA /* AttendanceEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceEndpoint.swift; sourceTree = "<group>"; };
 		B1DB781B2FFAEF5900DD93BA /* AttendanceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceType.swift; sourceTree = "<group>"; };
 		B1DB781E2FFAEFD400DD93BA /* RegisterAttendanceRequest+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterAttendanceRequest+Mapper.swift"; sourceTree = "<group>"; };
+		B1EA41303004003D00030DD5 /* TimeClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeClockView.swift; sourceTree = "<group>"; };
+		B1EA41323004011F00030DD5 /* TimeClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeClockViewModel.swift; sourceTree = "<group>"; };
+		B1EA413730040DD300030DD5 /* StatusCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,7 @@
 		B11DBB512FF9C1740052CDBD /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				B1EA412D3003FFF500030DD5 /* TimeClock */,
 				B11DBB5C2FF9C2470052CDBD /* Auth */,
 				B11DBB5A2FF9C22D0052CDBD /* AccessPoints */,
 				B11DBB572FF9C1F70052CDBD /* Attendance */,
@@ -353,6 +360,40 @@
 			path = Mappers;
 			sourceTree = "<group>";
 		};
+		B1EA412D3003FFF500030DD5 /* TimeClock */ = {
+			isa = PBXGroup;
+			children = (
+				B1EA412F3004001900030DD5 /* ViewModels */,
+				B1EA412E3004000D00030DD5 /* Views */,
+			);
+			path = TimeClock;
+			sourceTree = "<group>";
+		};
+		B1EA412E3004000D00030DD5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1EA413630040DCA00030DD5 /* Components */,
+				B1EA41303004003D00030DD5 /* TimeClockView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B1EA412F3004001900030DD5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B1EA41323004011F00030DD5 /* TimeClockViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B1EA413630040DCA00030DD5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B1EA413730040DD300030DD5 /* StatusCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -428,6 +469,7 @@
 				B1D71BA52FFAC63100249594 /* AuthRepositoryProtocol.swift in Sources */,
 				B11DBB632FF9C2BF0052CDBD /* Attendance.swift in Sources */,
 				B1D71BAC2FFAD25A00249594 /* RootView.swift in Sources */,
+				B1EA413830040DD300030DD5 /* StatusCard.swift in Sources */,
 				B1D71BA72FFAC85400249594 /* AuthEndpoint.swift in Sources */,
 				B11DBB672FF9C2E50052CDBD /* LoginRequest.swift in Sources */,
 				B11DBB4F2FF9BFED0052CDBD /* Endpoint.swift in Sources */,
@@ -439,7 +481,7 @@
 				845C89F32FF96B4400D5BD5B /* ContentView.swift in Sources */,
 				B11DBB7A2FF9CFDA0052CDBD /* AuthResponse.swift in Sources */,
 				B11DBB502FF9BFFF0052CDBD /* NetworkServiceProtocol.swift in Sources */,
-				B1D71B9D2FFAB8F700249594 /* AdminLoginView.swift in Sources */,
+				B1EA413530040C4D00030DD5 /* AdminLoginView.swift in Sources */,
 				B11DBB4E2FF9BE7D0052CDBD /* NetworkError.swift in Sources */,
 				B1DB781C2FFAEF5900DD93BA /* AttendanceType.swift in Sources */,
 				B1DB781A2FFAEEB500DD93BA /* AttendanceEndpoint.swift in Sources */,
@@ -453,8 +495,10 @@
 				B11DBB732FF9C4CD0052CDBD /* AttendanceRepository.swift in Sources */,
 				B11DBB7C2FF9D0480052CDBD /* AuthUser.swift in Sources */,
 				844C19BD2FFD5EED001EEA1A /* AttendanceRepositoryProtocol.swift in Sources */,
+				B1EA413430040C3600030DD5 /* TimeClockView.swift in Sources */,
 				B11DBB462FF9BDE20052CDBD /* HTTPMethod.swift in Sources */,
 				844C19BF2FFD6F56001EEA1A /* RegisterAttendanceRequest.swift in Sources */,
+				B1EA41333004011F00030DD5 /* TimeClockViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

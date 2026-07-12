@@ -41,4 +41,9 @@ final class AppContainer {
             repository: attendanceRepository
         )
     }()
+    
+    @MainActor
+    lazy var timeClockViewModel: TimeClockViewModel = {
+        TimeClockViewModel()
+    }()
 }

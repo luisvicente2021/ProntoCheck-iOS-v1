@@ -16,7 +16,8 @@ struct ProntoCheckApp: App {
         WindowGroup {
             RootView(
                         sessionManager: container.sessionManager,
-                        authViewModel: container.authViewModel
+                        authViewModel: container.authViewModel,
+                        timeClockViewModel: container.timeClockViewModel
                     )
         }
     }
