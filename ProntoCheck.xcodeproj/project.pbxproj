@@ -14,6 +14,14 @@
 		845C89F32FF96B4400D5BD5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C89F22FF96B4400D5BD5B /* ContentView.swift */; };
 		845C89F52FF96B4A00D5BD5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845C89F42FF96B4A00D5BD5B /* Assets.xcassets */; };
 		845C89F82FF96B4A00D5BD5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845C89F72FF96B4A00D5BD5B /* Preview Assets.xcassets */; };
+		84FB15D1300596BE00A8EEE5 /* FaceEmbeddingProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB15D0300596BE00A8EEE5 /* FaceEmbeddingProviderProtocol.swift */; };
+		84FB15D33005971500A8EEE5 /* FaceMatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB15D23005971500A8EEE5 /* FaceMatchResult.swift */; };
+		84FB15D53005976E00A8EEE5 /* FaceRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB15D43005976E00A8EEE5 /* FaceRecognitionService.swift */; };
+		84FB15D9300597CA00A8EEE5 /* CGImagePropertyOrientation+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB15D8300597CA00A8EEE5 /* CGImagePropertyOrientation+UIImage.swift */; };
+		84FB15DB3005981300A8EEE5 /* UnsupportedFaceEmbeddingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB15DA3005981300A8EEE5 /* UnsupportedFaceEmbeddingProvider.swift */; };
+		84FB15DD30068D7200A8EEE5 /* EmployeeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB15DC30068D7200A8EEE5 /* EmployeeEndpoint.swift */; };
+		84FF996C30053AA10018E169 /* FaceRecognitionServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FF996B30053AA10018E169 /* FaceRecognitionServiceProtocol.swift */; };
+		84FF996E30057F9F0018E169 /* FaceRecognitionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FF996D30057F9F0018E169 /* FaceRecognitionError.swift */; };
 		B11DBB462FF9BDE20052CDBD /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB452FF9BDDC0052CDBD /* HTTPMethod.swift */; };
 		B11DBB4C2FF9BE370052CDBD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB4B2FF9BE270052CDBD /* NetworkService.swift */; };
 		B11DBB4E2FF9BE7D0052CDBD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB4D2FF9BE7D0052CDBD /* NetworkError.swift */; };
@@ -30,7 +38,6 @@
 		B11DBB762FF9CCDE0052CDBD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB752FF9CCDE0052CDBD /* LocationManager.swift */; };
 		B11DBB7A2FF9CFDA0052CDBD /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB792FF9CFDA0052CDBD /* AuthResponse.swift */; };
 		B11DBB7C2FF9D0480052CDBD /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB7B2FF9D0480052CDBD /* AuthUser.swift */; };
-		B1C64C843004915F00CAB3DF /* EmployeeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C64C833004915F00CAB3DF /* EmployeeEndpoint.swift */; };
 		B1C64C8A3004939A00CAB3DF /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C64C893004939A00CAB3DF /* Employee.swift */; };
 		B1D71B9F2FFABFD600249594 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71B9E2FFABFD000249594 /* AuthViewModel.swift */; };
 		B1D71BA12FFAC5C900249594 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA02FFAC5C900249594 /* AppConfiguration.swift */; };
@@ -57,6 +64,14 @@
 		845C89F42FF96B4A00D5BD5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		845C89F72FF96B4A00D5BD5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		845C89FE2FF96F6B00D5BD5B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		84FB15D0300596BE00A8EEE5 /* FaceEmbeddingProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceEmbeddingProviderProtocol.swift; sourceTree = "<group>"; };
+		84FB15D23005971500A8EEE5 /* FaceMatchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMatchResult.swift; sourceTree = "<group>"; };
+		84FB15D43005976E00A8EEE5 /* FaceRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognitionService.swift; sourceTree = "<group>"; };
+		84FB15D8300597CA00A8EEE5 /* CGImagePropertyOrientation+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImage.swift"; sourceTree = "<group>"; };
+		84FB15DA3005981300A8EEE5 /* UnsupportedFaceEmbeddingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsupportedFaceEmbeddingProvider.swift; sourceTree = "<group>"; };
+		84FB15DC30068D7200A8EEE5 /* EmployeeEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeEndpoint.swift; path = ProntoCheck/Features/Employees/EmployeeEndpoint.swift; sourceTree = SOURCE_ROOT; };
+		84FF996B30053AA10018E169 /* FaceRecognitionServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognitionServiceProtocol.swift; sourceTree = "<group>"; };
+		84FF996D30057F9F0018E169 /* FaceRecognitionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognitionError.swift; sourceTree = "<group>"; };
 		B11DBB452FF9BDDC0052CDBD /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		B11DBB472FF9BDFE0052CDBD /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B11DBB492FF9BE150052CDBD /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
@@ -73,7 +88,6 @@
 		B11DBB752FF9CCDE0052CDBD /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B11DBB792FF9CFDA0052CDBD /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		B11DBB7B2FF9D0480052CDBD /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
-		B1C64C833004915F00CAB3DF /* EmployeeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeEndpoint.swift; sourceTree = "<group>"; };
 		B1C64C893004939A00CAB3DF /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		B1D71B9C2FFAB8F700249594 /* AdminLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginView.swift; sourceTree = "<group>"; };
 		B1D71B9E2FFABFD000249594 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
@@ -130,7 +144,6 @@
 		845C89EF2FF96B4400D5BD5B /* ProntoCheck */ = {
 			isa = PBXGroup;
 			children = (
-				B1C64C833004915F00CAB3DF /* EmployeeEndpoint.swift */,
 				B1D71BAB2FFAD25A00249594 /* RootView.swift */,
 				B1D71BA22FFAC5EC00249594 /* AppContainer.swift */,
 				B1D71BA02FFAC5C900249594 /* AppConfiguration.swift */,
@@ -152,6 +165,27 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		84FB15D63005979200A8EEE5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84FB15D8300597CA00A8EEE5 /* CGImagePropertyOrientation+UIImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		84FF996A30053A890018E169 /* FaceRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				84FF996B30053AA10018E169 /* FaceRecognitionServiceProtocol.swift */,
+				84FF996D30057F9F0018E169 /* FaceRecognitionError.swift */,
+				84FB15D0300596BE00A8EEE5 /* FaceEmbeddingProviderProtocol.swift */,
+				84FB15D23005971500A8EEE5 /* FaceMatchResult.swift */,
+				84FB15D43005976E00A8EEE5 /* FaceRecognitionService.swift */,
+				84FB15DA3005981300A8EEE5 /* UnsupportedFaceEmbeddingProvider.swift */,
+			);
+			path = FaceRecognition;
+			sourceTree = "<group>";
+		};
 		B11DBB432FF9BDC10052CDBD /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +201,8 @@
 		B11DBB442FF9BDC10052CDBD /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				84FB15D63005979200A8EEE5 /* Extensions */,
+				84FF996A30053A890018E169 /* FaceRecognition */,
 				B1D71BA82FFACEC800249594 /* Session */,
 				B11DBB742FF9CCD70052CDBD /* Location */,
 				B11DBB432FF9BDC10052CDBD /* Network */,
@@ -207,6 +243,7 @@
 		B11DBB562FF9C1CF0052CDBD /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
+				84FB15DC30068D7200A8EEE5 /* EmployeeEndpoint.swift */,
 				B11DBB5E2FF9C2900052CDBD /* CreateEmployeeRequest.swift */,
 			);
 			path = DTOs;
@@ -470,11 +507,11 @@
 				B11DBB6F2FF9C4A20052CDBD /* AccessPointRepository.swift in Sources */,
 				B1C64C8A3004939A00CAB3DF /* Employee.swift in Sources */,
 				B11DBB712FF9C4B40052CDBD /* AuthRepository.swift in Sources */,
-				B1C64C843004915F00CAB3DF /* EmployeeEndpoint.swift in Sources */,
 				B1D71BA52FFAC63100249594 /* AuthRepositoryProtocol.swift in Sources */,
 				B11DBB632FF9C2BF0052CDBD /* Attendance.swift in Sources */,
 				B1D71BAC2FFAD25A00249594 /* RootView.swift in Sources */,
 				B1EA413830040DD300030DD5 /* StatusCard.swift in Sources */,
+				84FF996C30053AA10018E169 /* FaceRecognitionServiceProtocol.swift in Sources */,
 				B1D71BA72FFAC85400249594 /* AuthEndpoint.swift in Sources */,
 				B11DBB672FF9C2E50052CDBD /* LoginRequest.swift in Sources */,
 				B11DBB4F2FF9BFED0052CDBD /* Endpoint.swift in Sources */,
@@ -484,21 +521,28 @@
 				B11DBB762FF9CCDE0052CDBD /* LocationManager.swift in Sources */,
 				B1D71BAA2FFACED300249594 /* SessionManager.swift in Sources */,
 				845C89F32FF96B4400D5BD5B /* ContentView.swift in Sources */,
+				84FB15D53005976E00A8EEE5 /* FaceRecognitionService.swift in Sources */,
 				B11DBB7A2FF9CFDA0052CDBD /* AuthResponse.swift in Sources */,
 				B11DBB502FF9BFFF0052CDBD /* NetworkServiceProtocol.swift in Sources */,
+				84FB15D9300597CA00A8EEE5 /* CGImagePropertyOrientation+UIImage.swift in Sources */,
 				B1EA413530040C4D00030DD5 /* AdminLoginView.swift in Sources */,
+				84FB15DB3005981300A8EEE5 /* UnsupportedFaceEmbeddingProvider.swift in Sources */,
 				B11DBB4E2FF9BE7D0052CDBD /* NetworkError.swift in Sources */,
 				B1DB781C2FFAEF5900DD93BA /* AttendanceType.swift in Sources */,
 				B1DB781A2FFAEEB500DD93BA /* AttendanceEndpoint.swift in Sources */,
 				B11DBB6D2FF9C4790052CDBD /* EmployeeRepository.swift in Sources */,
 				B1D71BA12FFAC5C900249594 /* AppConfiguration.swift in Sources */,
 				844C19C22FFD8172001EEA1A /* AttendanceViewModel.swift in Sources */,
+				84FF996E30057F9F0018E169 /* FaceRecognitionError.swift in Sources */,
 				B1D71BA32FFAC5EC00249594 /* AppContainer.swift in Sources */,
 				845C89F12FF96B4400D5BD5B /* ProntoCheckApp.swift in Sources */,
 				B1D71B9F2FFABFD600249594 /* AuthViewModel.swift in Sources */,
 				B11DBB732FF9C4CD0052CDBD /* AttendanceRepository.swift in Sources */,
 				B11DBB7C2FF9D0480052CDBD /* AuthUser.swift in Sources */,
+				84FB15DD30068D7200A8EEE5 /* EmployeeEndpoint.swift in Sources */,
 				844C19BD2FFD5EED001EEA1A /* AttendanceRepositoryProtocol.swift in Sources */,
+				84FB15D1300596BE00A8EEE5 /* FaceEmbeddingProviderProtocol.swift in Sources */,
+				84FB15D33005971500A8EEE5 /* FaceMatchResult.swift in Sources */,
 				B1EA413430040C3600030DD5 /* TimeClockView.swift in Sources */,
 				B11DBB462FF9BDE20052CDBD /* HTTPMethod.swift in Sources */,
 				844C19BF2FFD6F56001EEA1A /* RegisterAttendanceRequest.swift in Sources */,
