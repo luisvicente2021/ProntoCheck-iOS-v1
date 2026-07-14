@@ -56,6 +56,10 @@ final class NetworkService: NetworkServiceProtocol {
         do {
             return try JSONDecoder().decode(T.self, from: data)
         } catch {
+            #if DEBUG
+            print("❌ Decoding error:", error)
+            #endif
+
             throw NetworkError.decodingError
         }
     }

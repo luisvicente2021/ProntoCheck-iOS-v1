@@ -41,6 +41,8 @@ final class TimeClockViewModel: ObservableObject {
     }
 
     func validateFace(_ image: UIImage) async {
+        print("✅ TimeClockViewModel: iniciando validación")
+
         scannerStatus = "ESCANEANDO..."
         statusMessage = "Analizando rostro..."
         isFaceValidated = false
@@ -50,12 +52,15 @@ final class TimeClockViewModel: ObservableObject {
             let embedding = try await faceRecognitionService
                 .generateEmbedding(from: image)
 
+            print("✅ Embedding generated:", embedding.count)
+
             guard let match = faceRecognitionService.findMatchingEmployee(
                 embedding: embedding,
                 employees: employees
             ) else {
                 scannerStatus = "NO AUTORIZADO"
                 statusMessage = "Rostro no reconocido"
+                print("❌ No employee match found")
                 return
             }
 
@@ -64,25 +69,16 @@ final class TimeClockViewModel: ObservableObject {
             scannerStatus = "ROSTRO OK"
             statusMessage = "Bienvenido, \(match.employee.fullName)"
 
-            print(
-                "Employee matched:",
-                match.employee.fullName,
-                "distance:",
-                match.distance
-            )
+            print("✅ Employee matched:", match.employee.fullName)
+            print("Distance:", match.distance)
+
         } catch {
             isFaceValidated = false
             detectedEmployee = nil
-
-            if let localizedError = error as? LocalizedError,
-               let description = localizedError.errorDescription {
-                statusMessage = description
-            } else {
-                statusMessage = "No fue posible validar el rostro"
-            }
-
             scannerStatus = "ERROR"
-            print("Face recognition error:", error)
+            statusMessage = error.localizedDescription
+
+            print("❌ Face validation error:", error)
         }
     }
 
@@ -94,13 +90,34 @@ final class TimeClockViewModel: ObservableObject {
     private func loadEmployees() async {
         do {
             employees = try await employeeRepository.fetchEmployees()
+            print("Employees loaded:", employees.count)
 
-            if employees.isEmpty {
-                statusMessage = "No hay empleados disponibles"
-            }
+        } catch let DecodingError.keyNotFound(key, context) {
+            print("❌ Missing key:", key.stringValue)
+            print("Context:", context.debugDescription)
+            print("Path:", context.codingPath.map(\.stringValue))
+            statusMessage = "Falta un campo del empleado"
+
+        } catch let DecodingError.valueNotFound(type, context) {
+            print("❌ Unexpected null for:", type)
+            print("Context:", context.debugDescription)
+            print("Path:", context.codingPath.map(\.stringValue))
+            statusMessage = "Un dato obligatorio del empleado está vacío"
+
+        } catch let DecodingError.typeMismatch(type, context) {
+            print("❌ Type mismatch:", type)
+            print("Context:", context.debugDescription)
+            print("Path:", context.codingPath.map(\.stringValue))
+            statusMessage = "Un dato del empleado tiene un formato incorrecto"
+
+        } catch let DecodingError.dataCorrupted(context) {
+            print("❌ Corrupted data:", context.debugDescription)
+            print("Path:", context.codingPath.map(\.stringValue))
+            statusMessage = "Los datos del empleado no son válidos"
+
         } catch {
+            print("❌ Employee loading error:", error)
             statusMessage = "No se pudieron cargar los empleados"
-            print("Employee loading error:", error)
         }
     }
 

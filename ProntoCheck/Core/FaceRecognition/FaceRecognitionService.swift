@@ -77,9 +77,22 @@ final class FaceRecognitionService: FaceRecognitionServiceProtocol {
         var bestDistance = Float.greatestFiniteMagnitude
 
         for employee in employees {
-            guard let storedEmbedding = employee.iOSFaceEmbeddingValues,
-                  storedEmbedding.count == normalizedEmbedding.count
-            else {
+            guard let storedEmbedding = employee.faceEmbeddingIOS else {
+                print("⚠️ No iOS embedding for:", employee.fullName)
+                continue
+            }
+
+            print(
+                "Employee:",
+                employee.fullName,
+                "stored:",
+                storedEmbedding.count,
+                "new:",
+                normalizedEmbedding.count
+            )
+
+            guard storedEmbedding.count == normalizedEmbedding.count else {
+                print("⚠️ Embedding dimension mismatch")
                 continue
             }
 
@@ -89,6 +102,8 @@ final class FaceRecognitionService: FaceRecognitionServiceProtocol {
                 normalizedEmbedding,
                 normalizedStoredEmbedding
             )
+
+            print("Distance for \(employee.fullName):", distance)
 
             if distance < bestDistance {
                 bestDistance = distance

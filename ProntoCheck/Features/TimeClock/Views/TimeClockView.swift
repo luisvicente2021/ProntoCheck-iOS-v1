@@ -44,7 +44,13 @@ struct TimeClockView: View {
             await viewModel.start()
         }
         .sheet(isPresented: $isCameraPresented) {
-            
+            FaceCaptureView { image in
+                print("✅ TimeClockView: imagen recibida")
+
+                Task {
+                    await viewModel.validateFace(image)
+                }
+            }
         }
         .sheet(isPresented: $isAdminLoginPresented) {
             
