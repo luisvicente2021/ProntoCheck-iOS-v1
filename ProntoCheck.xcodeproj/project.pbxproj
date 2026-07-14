@@ -19,7 +19,6 @@
 		B11DBB4E2FF9BE7D0052CDBD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB4D2FF9BE7D0052CDBD /* NetworkError.swift */; };
 		B11DBB4F2FF9BFED0052CDBD /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB472FF9BDFE0052CDBD /* Endpoint.swift */; };
 		B11DBB502FF9BFFF0052CDBD /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB492FF9BE150052CDBD /* NetworkServiceProtocol.swift */; };
-		B11DBB542FF9C1A10052CDBD /* Employees.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB532FF9C1910052CDBD /* Employees.swift */; };
 		B11DBB5F2FF9C2930052CDBD /* CreateEmployeeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB5E2FF9C2900052CDBD /* CreateEmployeeRequest.swift */; };
 		B11DBB632FF9C2BF0052CDBD /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB622FF9C2BD0052CDBD /* Attendance.swift */; };
 		B11DBB652FF9C2D10052CDBD /* AccessPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB642FF9C2CF0052CDBD /* AccessPoint.swift */; };
@@ -31,6 +30,8 @@
 		B11DBB762FF9CCDE0052CDBD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB752FF9CCDE0052CDBD /* LocationManager.swift */; };
 		B11DBB7A2FF9CFDA0052CDBD /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB792FF9CFDA0052CDBD /* AuthResponse.swift */; };
 		B11DBB7C2FF9D0480052CDBD /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB7B2FF9D0480052CDBD /* AuthUser.swift */; };
+		B1C64C843004915F00CAB3DF /* EmployeeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C64C833004915F00CAB3DF /* EmployeeEndpoint.swift */; };
+		B1C64C8A3004939A00CAB3DF /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C64C893004939A00CAB3DF /* Employee.swift */; };
 		B1D71B9F2FFABFD600249594 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71B9E2FFABFD000249594 /* AuthViewModel.swift */; };
 		B1D71BA12FFAC5C900249594 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA02FFAC5C900249594 /* AppConfiguration.swift */; };
 		B1D71BA32FFAC5EC00249594 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D71BA22FFAC5EC00249594 /* AppContainer.swift */; };
@@ -61,7 +62,6 @@
 		B11DBB492FF9BE150052CDBD /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		B11DBB4B2FF9BE270052CDBD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B11DBB4D2FF9BE7D0052CDBD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		B11DBB532FF9C1910052CDBD /* Employees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employees.swift; sourceTree = "<group>"; };
 		B11DBB5E2FF9C2900052CDBD /* CreateEmployeeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmployeeRequest.swift; sourceTree = "<group>"; };
 		B11DBB622FF9C2BD0052CDBD /* Attendance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendance.swift; sourceTree = "<group>"; };
 		B11DBB642FF9C2CF0052CDBD /* AccessPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessPoint.swift; sourceTree = "<group>"; };
@@ -73,6 +73,8 @@
 		B11DBB752FF9CCDE0052CDBD /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B11DBB792FF9CFDA0052CDBD /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		B11DBB7B2FF9D0480052CDBD /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
+		B1C64C833004915F00CAB3DF /* EmployeeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeEndpoint.swift; sourceTree = "<group>"; };
+		B1C64C893004939A00CAB3DF /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		B1D71B9C2FFAB8F700249594 /* AdminLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginView.swift; sourceTree = "<group>"; };
 		B1D71B9E2FFABFD000249594 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		B1D71BA02FFAC5C900249594 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		845C89EF2FF96B4400D5BD5B /* ProntoCheck */ = {
 			isa = PBXGroup;
 			children = (
+				B1C64C833004915F00CAB3DF /* EmployeeEndpoint.swift */,
 				B1D71BAB2FFAD25A00249594 /* RootView.swift */,
 				B1D71BA22FFAC5EC00249594 /* AppContainer.swift */,
 				B1D71BA02FFAC5C900249594 /* AppConfiguration.swift */,
@@ -196,7 +199,7 @@
 		B11DBB552FF9C1C40052CDBD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B11DBB532FF9C1910052CDBD /* Employees.swift */,
+				B1C64C893004939A00CAB3DF /* Employee.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -465,7 +468,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B11DBB6F2FF9C4A20052CDBD /* AccessPointRepository.swift in Sources */,
+				B1C64C8A3004939A00CAB3DF /* Employee.swift in Sources */,
 				B11DBB712FF9C4B40052CDBD /* AuthRepository.swift in Sources */,
+				B1C64C843004915F00CAB3DF /* EmployeeEndpoint.swift in Sources */,
 				B1D71BA52FFAC63100249594 /* AuthRepositoryProtocol.swift in Sources */,
 				B11DBB632FF9C2BF0052CDBD /* Attendance.swift in Sources */,
 				B1D71BAC2FFAD25A00249594 /* RootView.swift in Sources */,
@@ -487,7 +492,6 @@
 				B1DB781A2FFAEEB500DD93BA /* AttendanceEndpoint.swift in Sources */,
 				B11DBB6D2FF9C4790052CDBD /* EmployeeRepository.swift in Sources */,
 				B1D71BA12FFAC5C900249594 /* AppConfiguration.swift in Sources */,
-				B11DBB542FF9C1A10052CDBD /* Employees.swift in Sources */,
 				844C19C22FFD8172001EEA1A /* AttendanceViewModel.swift in Sources */,
 				B1D71BA32FFAC5EC00249594 /* AppContainer.swift in Sources */,
 				845C89F12FF96B4400D5BD5B /* ProntoCheckApp.swift in Sources */,

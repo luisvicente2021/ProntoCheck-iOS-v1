@@ -9,15 +9,15 @@
 final class AppContainer {
     
     @MainActor
-       lazy var sessionManager = SessionManager()
-
+    lazy var sessionManager = SessionManager()
+    
     lazy var networkService: NetworkServiceProtocol = {
         NetworkService(
             baseURL: AppConfiguration.baseURL,
             apiKey: AppConfiguration.apiKey
         )
     }()
-
+    
     lazy var authRepository: AuthRepositoryProtocol = {
         AuthRepository(
             networkService: networkService
@@ -25,9 +25,9 @@ final class AppContainer {
     }()
     
     lazy var attendanceRepository: AttendanceRepositoryProtocol = {
-           AttendanceRepository(networkService: networkService)
-       }()
-
+        AttendanceRepository(networkService: networkService)
+    }()
+    
     @MainActor
     lazy var authViewModel: AuthViewModel = {
         AuthViewModel(
@@ -42,8 +42,10 @@ final class AppContainer {
         )
     }()
     
-    @MainActor
-    lazy var timeClockViewModel: TimeClockViewModel = {
-        TimeClockViewModel()
-    }()
+    
+     @MainActor
+     lazy var timeClockViewModel: TimeClockViewModel = {
+         TimeClockViewModel()
+     }()
+ 
 }
