@@ -38,12 +38,7 @@ import UIKit
                 )
 
                 isAuthenticated = true
-                print("Token:", response.accessToken)
                 sessionManager.saveSession(response)
-                
-                print(sessionManager.isAuthenticated)
-                print(sessionManager.currentUser?.email ?? "")
-                print(sessionManager.accessToken ?? "")
 
             } catch {
                 errorMessage = "No se pudo iniciar sesión"

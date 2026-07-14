@@ -37,6 +37,9 @@ fastlane/test_output/
 timeline.xctimeline
 playground.xcworkspace
 
+# Core ML model
+ProntoCheck/Resources/Models/FaceEmbedding.mlpackage/
+
 # Environment files
 .env
 .env.*

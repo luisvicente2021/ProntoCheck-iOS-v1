@@ -19,7 +19,13 @@ final class AppContainer {
     }()
     
     lazy var faceEmbeddingProvider: FaceEmbeddingProviderProtocol = {
-        UnsupportedFaceEmbeddingProvider()
+        do {
+            return try ArcFaceEmbeddingProvider()
+        } catch {
+            fatalError(
+                "No se pudo inicializar el modelo FaceEmbedding: \(error)"
+            )
+        }
     }()
     
     lazy var faceRecognitionService: FaceRecognitionServiceProtocol = {

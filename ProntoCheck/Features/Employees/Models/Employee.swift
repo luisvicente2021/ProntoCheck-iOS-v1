@@ -10,35 +10,49 @@ import Foundation
 struct Employee: Codable, Identifiable {
 
     let id: UUID
-    let email: String
+    let email: String?
     let firstName: String
     let position: String?
 
-    let paternalLastName: String
-    let maternalLastName: String
+    let paternalLastName: String?
+    let maternalLastName: String?
 
-    let residentialArea: String
-    let address: String
+    let residentialArea: String?
+    let address: String?
 
     let homePhone: String?
     let companyPhone: String?
 
-    let latitude: Double
-    let longitude: Double
+    let latitude: Double?
+    let longitude: Double?
 
     let faceEmbedding: String?
-    let faceEmbeddingIOS: String?
+    let faceEmbeddingIOS: [Float]?
     let faceEmbeddingAndroid: String?
 
     let employeeCode: String
 
-    let isActive: Bool
-    let workingHours: Int
+    let isActive: Bool?
+    let workingHours: Int?
 
-    let createdAt: String
+    let createdAt: String?
 
     var fullName: String {
-        "\(firstName) \(paternalLastName) \(maternalLastName)"
+        [
+            firstName,
+            paternalLastName,
+            maternalLastName
+        ]
+        .compactMap { value in
+            guard let value,
+                  !value.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+            else {
+                return nil
+            }
+
+            return value
+        }
+        .joined(separator: " ")
     }
 
     enum CodingKeys: String, CodingKey {
@@ -67,19 +81,5 @@ struct Employee: Codable, Identifiable {
         case isActive = "activo"
         case workingHours = "jornada_horas"
         case createdAt = "created_at"
-    }
-}
-
-extension Employee {
-
-    var iOSFaceEmbeddingValues: [Float]? {
-        guard let faceEmbeddingIOS,
-              let data = faceEmbeddingIOS.data(using: .utf8),
-              let values = try? JSONDecoder().decode([Float].self, from: data)
-        else {
-            return nil
-        }
-
-        return values
     }
 }

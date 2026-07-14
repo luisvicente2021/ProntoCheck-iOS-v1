@@ -20,6 +20,11 @@
 		84FB15D9300597CA00A8EEE5 /* CGImagePropertyOrientation+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB15D8300597CA00A8EEE5 /* CGImagePropertyOrientation+UIImage.swift */; };
 		84FB15DB3005981300A8EEE5 /* UnsupportedFaceEmbeddingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB15DA3005981300A8EEE5 /* UnsupportedFaceEmbeddingProvider.swift */; };
 		84FB15DD30068D7200A8EEE5 /* EmployeeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB15DC30068D7200A8EEE5 /* EmployeeEndpoint.swift */; };
+		84FB15E130069A9D00A8EEE5 /* FaceEmbedding.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 84FB15E030069A9D00A8EEE5 /* FaceEmbedding.mlpackage */; };
+		84FB15E330069B2F00A8EEE5 /* ArcFaceEmbeddingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB15E230069B2F00A8EEE5 /* ArcFaceEmbeddingProvider.swift */; };
+		84FB15E530069E8700A8EEE5 /* UIImage+PixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB15E430069E8700A8EEE5 /* UIImage+PixelBuffer.swift */; };
+		84FB15E83006A2D400A8EEE5 /* FaceCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB15E73006A2D400A8EEE5 /* FaceCaptureView.swift */; };
+		84FB15EA3006A2FA00A8EEE5 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB15E93006A2FA00A8EEE5 /* CameraView.swift */; };
 		84FF996C30053AA10018E169 /* FaceRecognitionServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FF996B30053AA10018E169 /* FaceRecognitionServiceProtocol.swift */; };
 		84FF996E30057F9F0018E169 /* FaceRecognitionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FF996D30057F9F0018E169 /* FaceRecognitionError.swift */; };
 		B11DBB462FF9BDE20052CDBD /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11DBB452FF9BDDC0052CDBD /* HTTPMethod.swift */; };
@@ -70,6 +75,12 @@
 		84FB15D8300597CA00A8EEE5 /* CGImagePropertyOrientation+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImage.swift"; sourceTree = "<group>"; };
 		84FB15DA3005981300A8EEE5 /* UnsupportedFaceEmbeddingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsupportedFaceEmbeddingProvider.swift; sourceTree = "<group>"; };
 		84FB15DC30068D7200A8EEE5 /* EmployeeEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeEndpoint.swift; path = ProntoCheck/Features/Employees/EmployeeEndpoint.swift; sourceTree = SOURCE_ROOT; };
+		84FB15E030069A9D00A8EEE5 /* FaceEmbedding.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = FaceEmbedding.mlpackage; sourceTree = "<group>"; };
+		84FB15E230069B2F00A8EEE5 /* ArcFaceEmbeddingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcFaceEmbeddingProvider.swift; sourceTree = "<group>"; };
+		84FB15E430069E8700A8EEE5 /* UIImage+PixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+PixelBuffer.swift"; sourceTree = "<group>"; };
+		84FB15E73006A2D400A8EEE5 /* FaceCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceCaptureView.swift; sourceTree = "<group>"; };
+		84FB15E93006A2FA00A8EEE5 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		84FB15EB3006A40000A8EEE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		84FF996B30053AA10018E169 /* FaceRecognitionServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognitionServiceProtocol.swift; sourceTree = "<group>"; };
 		84FF996D30057F9F0018E169 /* FaceRecognitionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognitionError.swift; sourceTree = "<group>"; };
 		B11DBB452FF9BDDC0052CDBD /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -144,6 +155,8 @@
 		845C89EF2FF96B4400D5BD5B /* ProntoCheck */ = {
 			isa = PBXGroup;
 			children = (
+				84FB15EB3006A40000A8EEE5 /* Info.plist */,
+				84FB15DE30069A5600A8EEE5 /* Resources */,
 				B1D71BAB2FFAD25A00249594 /* RootView.swift */,
 				B1D71BA22FFAC5EC00249594 /* AppContainer.swift */,
 				B1D71BA02FFAC5C900249594 /* AppConfiguration.swift */,
@@ -169,8 +182,34 @@
 			isa = PBXGroup;
 			children = (
 				84FB15D8300597CA00A8EEE5 /* CGImagePropertyOrientation+UIImage.swift */,
+				84FB15E430069E8700A8EEE5 /* UIImage+PixelBuffer.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		84FB15DE30069A5600A8EEE5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84FB15DF30069A6300A8EEE5 /* Models */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84FB15DF30069A6300A8EEE5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84FB15E030069A9D00A8EEE5 /* FaceEmbedding.mlpackage */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84FB15E63006A2C500A8EEE5 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				84FB15E73006A2D400A8EEE5 /* FaceCaptureView.swift */,
+				84FB15E93006A2FA00A8EEE5 /* CameraView.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		84FF996A30053A890018E169 /* FaceRecognition */ = {
@@ -182,6 +221,7 @@
 				84FB15D23005971500A8EEE5 /* FaceMatchResult.swift */,
 				84FB15D43005976E00A8EEE5 /* FaceRecognitionService.swift */,
 				84FB15DA3005981300A8EEE5 /* UnsupportedFaceEmbeddingProvider.swift */,
+				84FB15E230069B2F00A8EEE5 /* ArcFaceEmbeddingProvider.swift */,
 			);
 			path = FaceRecognition;
 			sourceTree = "<group>";
@@ -412,6 +452,7 @@
 		B1EA412E3004000D00030DD5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84FB15E63006A2C500A8EEE5 /* Camera */,
 				B1EA413630040DCA00030DD5 /* Components */,
 				B1EA41303004003D00030DD5 /* TimeClockView.swift */,
 			);
@@ -508,18 +549,23 @@
 				B1C64C8A3004939A00CAB3DF /* Employee.swift in Sources */,
 				B11DBB712FF9C4B40052CDBD /* AuthRepository.swift in Sources */,
 				B1D71BA52FFAC63100249594 /* AuthRepositoryProtocol.swift in Sources */,
+				84FB15E330069B2F00A8EEE5 /* ArcFaceEmbeddingProvider.swift in Sources */,
 				B11DBB632FF9C2BF0052CDBD /* Attendance.swift in Sources */,
 				B1D71BAC2FFAD25A00249594 /* RootView.swift in Sources */,
 				B1EA413830040DD300030DD5 /* StatusCard.swift in Sources */,
 				84FF996C30053AA10018E169 /* FaceRecognitionServiceProtocol.swift in Sources */,
 				B1D71BA72FFAC85400249594 /* AuthEndpoint.swift in Sources */,
+				84FB15E530069E8700A8EEE5 /* UIImage+PixelBuffer.swift in Sources */,
 				B11DBB672FF9C2E50052CDBD /* LoginRequest.swift in Sources */,
 				B11DBB4F2FF9BFED0052CDBD /* Endpoint.swift in Sources */,
 				B11DBB4C2FF9BE370052CDBD /* NetworkService.swift in Sources */,
+				84FB15E130069A9D00A8EEE5 /* FaceEmbedding.mlpackage in Sources */,
+				84FB15EA3006A2FA00A8EEE5 /* CameraView.swift in Sources */,
 				B11DBB5F2FF9C2930052CDBD /* CreateEmployeeRequest.swift in Sources */,
 				B11DBB652FF9C2D10052CDBD /* AccessPoint.swift in Sources */,
 				B11DBB762FF9CCDE0052CDBD /* LocationManager.swift in Sources */,
 				B1D71BAA2FFACED300249594 /* SessionManager.swift in Sources */,
+				84FB15E83006A2D400A8EEE5 /* FaceCaptureView.swift in Sources */,
 				845C89F32FF96B4400D5BD5B /* ContentView.swift in Sources */,
 				84FB15D53005976E00A8EEE5 /* FaceRecognitionService.swift in Sources */,
 				B11DBB7A2FF9CFDA0052CDBD /* AuthResponse.swift in Sources */,
@@ -683,6 +729,9 @@
 				DEVELOPMENT_TEAM = 63KDPU835H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProntoCheck/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "ProntoCheck necesita acceder a la cámara para capturar el rostro del empleado y validar su identidad.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -712,6 +761,9 @@
 				DEVELOPMENT_TEAM = 63KDPU835H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProntoCheck/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "ProntoCheck necesita acceder a la cámara para capturar el rostro del empleado y validar su identidad.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
