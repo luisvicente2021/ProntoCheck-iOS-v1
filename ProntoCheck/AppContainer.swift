@@ -18,6 +18,16 @@ final class AppContainer {
         )
     }()
     
+    lazy var faceEmbeddingProvider: FaceEmbeddingProviderProtocol = {
+        UnsupportedFaceEmbeddingProvider()
+    }()
+    
+    lazy var faceRecognitionService: FaceRecognitionServiceProtocol = {
+        
+        FaceRecognitionService(embeddingProvider: faceEmbeddingProvider, recognitionThreshold: 1.0)
+        
+    }()
+    
     lazy var authRepository: AuthRepositoryProtocol = {
         AuthRepository(
             networkService: networkService
@@ -27,6 +37,11 @@ final class AppContainer {
     lazy var attendanceRepository: AttendanceRepositoryProtocol = {
         AttendanceRepository(networkService: networkService)
     }()
+    
+    lazy var employeeRepository: EmployeeRepositoryProtocol = {
+        EmployeeRepository(networkService: networkService)
+    }()
+    
     
     @MainActor
     lazy var authViewModel: AuthViewModel = {
@@ -43,9 +58,8 @@ final class AppContainer {
     }()
     
     
-     @MainActor
-     lazy var timeClockViewModel: TimeClockViewModel = {
-         TimeClockViewModel()
-     }()
- 
+    @MainActor
+    lazy var timeClockViewModel: TimeClockViewModel = {
+        TimeClockViewModel(employeeRepository: employeeRepository, faceRecognitionService: faceRecognitionService)
+    }()
 }
