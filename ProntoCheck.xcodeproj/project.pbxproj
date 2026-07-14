@@ -14,6 +14,9 @@
 		845C89F32FF96B4400D5BD5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C89F22FF96B4400D5BD5B /* ContentView.swift */; };
 		845C89F52FF96B4A00D5BD5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845C89F42FF96B4A00D5BD5B /* Assets.xcassets */; };
 		845C89F82FF96B4A00D5BD5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845C89F72FF96B4A00D5BD5B /* Preview Assets.xcassets */; };
+		84C0A26D3006DF340007087B /* UpdateFaceEmbeddingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0A26C3006DF340007087B /* UpdateFaceEmbeddingRequest.swift */; };
+		84C0A26F3006EF200007087B /* EmployeeFaceEnrollmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0A26E3006EF200007087B /* EmployeeFaceEnrollmentViewModel.swift */; };
+		84C0A2713006EFCB0007087B /* EmployeeFaceEnrollmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0A2703006EFCA0007087B /* EmployeeFaceEnrollmentView.swift */; };
 		84FB15D1300596BE00A8EEE5 /* FaceEmbeddingProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB15D0300596BE00A8EEE5 /* FaceEmbeddingProviderProtocol.swift */; };
 		84FB15D33005971500A8EEE5 /* FaceMatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB15D23005971500A8EEE5 /* FaceMatchResult.swift */; };
 		84FB15D53005976E00A8EEE5 /* FaceRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB15D43005976E00A8EEE5 /* FaceRecognitionService.swift */; };
@@ -69,6 +72,9 @@
 		845C89F42FF96B4A00D5BD5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		845C89F72FF96B4A00D5BD5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		845C89FE2FF96F6B00D5BD5B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		84C0A26C3006DF340007087B /* UpdateFaceEmbeddingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateFaceEmbeddingRequest.swift; sourceTree = "<group>"; };
+		84C0A26E3006EF200007087B /* EmployeeFaceEnrollmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeFaceEnrollmentViewModel.swift; sourceTree = "<group>"; };
+		84C0A2703006EFCA0007087B /* EmployeeFaceEnrollmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeFaceEnrollmentView.swift; sourceTree = "<group>"; };
 		84FB15D0300596BE00A8EEE5 /* FaceEmbeddingProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceEmbeddingProviderProtocol.swift; sourceTree = "<group>"; };
 		84FB15D23005971500A8EEE5 /* FaceMatchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMatchResult.swift; sourceTree = "<group>"; };
 		84FB15D43005976E00A8EEE5 /* FaceRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceRecognitionService.swift; sourceTree = "<group>"; };
@@ -178,6 +184,40 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		84C0A2683006DDD60007087B /* FaceEnrollment */ = {
+			isa = PBXGroup;
+			children = (
+				84C0A26B3006DE200007087B /* Views */,
+				84C0A26A3006DE190007087B /* ViewModels */,
+				84C0A2693006DE090007087B /* DTOs */,
+			);
+			path = FaceEnrollment;
+			sourceTree = "<group>";
+		};
+		84C0A2693006DE090007087B /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				84C0A26C3006DF340007087B /* UpdateFaceEmbeddingRequest.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		84C0A26A3006DE190007087B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				84C0A26E3006EF200007087B /* EmployeeFaceEnrollmentViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		84C0A26B3006DE200007087B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84C0A2703006EFCA0007087B /* EmployeeFaceEnrollmentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		84FB15D63005979200A8EEE5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +305,7 @@
 		B11DBB522FF9C1830052CDBD /* Employees */ = {
 			isa = PBXGroup;
 			children = (
+				84C0A2683006DDD60007087B /* FaceEnrollment */,
 				B11DBB6B2FF9C4600052CDBD /* Repository */,
 				B11DBB562FF9C1CF0052CDBD /* DTOs */,
 				B11DBB552FF9C1C40052CDBD /* Models */,
@@ -547,12 +588,14 @@
 			files = (
 				B11DBB6F2FF9C4A20052CDBD /* AccessPointRepository.swift in Sources */,
 				B1C64C8A3004939A00CAB3DF /* Employee.swift in Sources */,
+				84C0A2713006EFCB0007087B /* EmployeeFaceEnrollmentView.swift in Sources */,
 				B11DBB712FF9C4B40052CDBD /* AuthRepository.swift in Sources */,
 				B1D71BA52FFAC63100249594 /* AuthRepositoryProtocol.swift in Sources */,
 				84FB15E330069B2F00A8EEE5 /* ArcFaceEmbeddingProvider.swift in Sources */,
 				B11DBB632FF9C2BF0052CDBD /* Attendance.swift in Sources */,
 				B1D71BAC2FFAD25A00249594 /* RootView.swift in Sources */,
 				B1EA413830040DD300030DD5 /* StatusCard.swift in Sources */,
+				84C0A26D3006DF340007087B /* UpdateFaceEmbeddingRequest.swift in Sources */,
 				84FF996C30053AA10018E169 /* FaceRecognitionServiceProtocol.swift in Sources */,
 				B1D71BA72FFAC85400249594 /* AuthEndpoint.swift in Sources */,
 				84FB15E530069E8700A8EEE5 /* UIImage+PixelBuffer.swift in Sources */,
@@ -581,6 +624,7 @@
 				844C19C22FFD8172001EEA1A /* AttendanceViewModel.swift in Sources */,
 				84FF996E30057F9F0018E169 /* FaceRecognitionError.swift in Sources */,
 				B1D71BA32FFAC5EC00249594 /* AppContainer.swift in Sources */,
+				84C0A26F3006EF200007087B /* EmployeeFaceEnrollmentViewModel.swift in Sources */,
 				845C89F12FF96B4400D5BD5B /* ProntoCheckApp.swift in Sources */,
 				B1D71B9F2FFABFD600249594 /* AuthViewModel.swift in Sources */,
 				B11DBB732FF9C4CD0052CDBD /* AttendanceRepository.swift in Sources */,

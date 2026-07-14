@@ -48,7 +48,6 @@ final class AppContainer {
         EmployeeRepository(networkService: networkService)
     }()
     
-    
     @MainActor
     lazy var authViewModel: AuthViewModel = {
         AuthViewModel(
@@ -63,9 +62,17 @@ final class AppContainer {
         )
     }()
     
-    
     @MainActor
     lazy var timeClockViewModel: TimeClockViewModel = {
         TimeClockViewModel(employeeRepository: employeeRepository, faceRecognitionService: faceRecognitionService)
+    }()
+    
+    @MainActor
+    lazy var employeeFaceEnrollmentViewModel:
+    EmployeeFaceEnrollmentViewModel = {
+        
+        EmployeeFaceEnrollmentViewModel(
+            employeeRepository: employeeRepository,
+            faceRecognitionService: faceRecognitionService)
     }()
 }

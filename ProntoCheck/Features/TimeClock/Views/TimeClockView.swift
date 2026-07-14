@@ -10,12 +10,15 @@ import SwiftUI
 struct TimeClockView: View {
     
     @StateObject private var viewModel: TimeClockViewModel
+    @StateObject private var employeeFaceEnrollmentViewModel: EmployeeFaceEnrollmentViewModel
     
     @State private var isCameraPresented = false
     @State private var isAdminLoginPresented = false
     
-    init(viewModel: TimeClockViewModel) {
+    init(viewModel: TimeClockViewModel,
+         employeeFaceEnrollmentViewModel: EmployeeFaceEnrollmentViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
+        _employeeFaceEnrollmentViewModel = StateObject(wrappedValue: employeeFaceEnrollmentViewModel)
     }
     
     var body: some View {
@@ -53,7 +56,11 @@ struct TimeClockView: View {
             }
         }
         .sheet(isPresented: $isAdminLoginPresented) {
-            
+            NavigationStack {
+                EmployeeFaceEnrollmentView(
+                    viewModel: employeeFaceEnrollmentViewModel
+                )
+            }
         }
         .onDisappear {
             viewModel.stopClock()

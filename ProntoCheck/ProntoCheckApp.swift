@@ -17,7 +17,8 @@ struct ProntoCheckApp: App {
             RootView(
                         sessionManager: container.sessionManager,
                         authViewModel: container.authViewModel,
-                        timeClockViewModel: container.timeClockViewModel
+                        timeClockViewModel: container.timeClockViewModel,
+                        employeeFaceEnrollmentViewModel: container.employeeFaceEnrollmentViewModel
                     )
         }
     }

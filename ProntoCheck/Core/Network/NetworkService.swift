@@ -41,7 +41,9 @@ final class NetworkService: NetworkServiceProtocol {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue(apiKey, forHTTPHeaderField: "apikey")
         request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
-        request.setValue("return=representation", forHTTPHeaderField: "Prefer")
+        endpoint.headers?.forEach { key, value in
+            request.setValue(value, forHTTPHeaderField: key)
+        }
 
         let (data, response) = try await session.data(for: request)
 
@@ -50,7 +52,20 @@ final class NetworkService: NetworkServiceProtocol {
         }
 
         guard 200...299 ~= httpResponse.statusCode else {
-            throw NetworkError.serverError(statusCode: httpResponse.statusCode)
+            #if DEBUG
+            let responseBody = String(
+                data: data,
+                encoding: .utf8
+            ) ?? "Respuesta sin contenido"
+
+            print("❌ HTTP status:", httpResponse.statusCode)
+            print("❌ Supabase response:", responseBody)
+            print("❌ Request URL:", url.absoluteString)
+            #endif
+
+            throw NetworkError.serverError(
+                statusCode: httpResponse.statusCode
+            )
         }
 
         do {

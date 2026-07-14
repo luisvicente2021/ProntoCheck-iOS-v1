@@ -14,8 +14,10 @@ protocol Endpoint {
     var method: HTTPMethod { get }
     var body: Data? { get }
     var queryItems: [URLQueryItem]? { get }
+    var headers: [String: String]? { get }
 }
 
 extension Endpoint {
     var body: Data? { nil }
+    var headers: [String: String]? { nil }
 }
